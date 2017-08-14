@@ -1,6 +1,8 @@
 language: php
+
 php:
 - 7.0
+
 env:
   matrix:
   - "..."
@@ -9,7 +11,10 @@ env:
   - GIT_EMAIL: jerry@mydocfake.com
   - GH_REF: github.com/lianhub/docs
   - secure: mWbWWQKCSqe4aXD3e9JswCMqMPBWAabKhY9vIINjXfGdq2zTqiJlpjWZ4A8xNbF1W/0oQ2CsTuUDEBg7KLIJETSelBVsarDPc8Waw09xZKW9gRY/BqChPHLIzNupGHjOm/mC84XG7Jhru7UMwbqRCqVm76PiSXGr80EcvPyhqMJHbrosWwno2eZZf5VX5yNEwrlYmaLJs8GZBFLMaHT/OLEODG5nVwFKUUVjmbSKS0krRQsYlmvgjuoJXS4a982gztu98cUuWxF7NLtbNQ3UsTvAUXzvQOAhhoRcWZwdEgy6BzM8Ns85kPCMEFjXg4uPGODpv/KsJtcWaw0bimWHIbImjG4l0fE/nm9l8IvMyzGzD4cIadEiV/JPyBKVecWg+9FWWlhl8fxAY9ryTSNLF149/OzQVAFT3lmk3o94LjiB3sKtqQwN5Okc32ii3UnGHLn6go2wBSfynIagU1eM590WJ9mfD+/d7u93UebLau4GUOsIJ9m61Qza40k+OYX8GtNqiSBi/l2rv8HNsoFXkq/Avy/x8eVEqUmjRnJ+TNOyFsoDmaoo3IlM6kmTftAW5rTPSrgOeWah0+i8nxJ4BcfAA2gcbFy7ToDRyyRZIQyAtfp47uJK/MIIQYJiFhfym+tvP+nVOOrOZTjlattWuhdwhmEJJ1PG7YcNcxnWZW0=
+
 before_script:
 - composer install --no-progress
+
 script:
-- php couscous.phar travis-auto-deploy --php-version=7.0
+- vendor/bin/couscous travis-auto-deploy --php-version=7.0
+#- php couscous.phar travis-auto-deploy --php-version=7.0
